@@ -1,0 +1,16 @@
+.personal-info {
+  display: flex;
+  align-items: center;
+  height: 9.5rem;
+}
+
+.image-container img {
+  border: 1.5px solid var(--secundary-color);
+  border-radius: 100%;
+  height: auto;
+  width: 9rem;
+}
+
+.info-container {
+  padding: 0 5px 0 10px;
+}
