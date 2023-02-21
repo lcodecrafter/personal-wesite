@@ -7,17 +7,15 @@
   width: 1.4rem;
 }
 
-.container svg:nth-child(2n) {
-  margin-left: 1rem;
-}
-.container svg:nth-last-child(1) {
-  margin-left: 1rem;
-}
-
 .linkedin {
   background-color: #5b8fd8;
 }
 
 .codewars {
   background-color: #b1361e;
+}
+
+.github,
+.codewars {
+  margin-left: 1rem;
 }
