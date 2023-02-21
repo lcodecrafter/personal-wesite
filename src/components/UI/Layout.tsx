@@ -7,8 +7,8 @@ interface props {
 
 export default function Layout({ children }: props) {
   return (
-    <div className={styles.container}>
+    <>
       <main className={styles.main}>{children}</main>
-    </div>
+    </>
   );
 }
