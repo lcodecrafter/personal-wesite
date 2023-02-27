@@ -1,5 +1,5 @@
-import SocialLinks from './UI/SocialLinks';
-import portraitImg from '@assets/me.jpeg';
+import SocialLinks from '@/components/UI/SocialLinks';
+import portraitImg from '@/assets/me.jpeg';
 
 import styles from './personalInfo.module.css';
 

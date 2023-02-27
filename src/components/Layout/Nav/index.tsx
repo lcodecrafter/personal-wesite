@@ -1,5 +1,5 @@
-import Light from './icons/Light';
-import Dark from './icons/Dark';
+import Light from '@/components/UI/icons/Light';
+import Dark from '@/components/UI/icons/Dark';
 
 import styles from './nav.module.css';
 
