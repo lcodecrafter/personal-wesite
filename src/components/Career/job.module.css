@@ -1,0 +1,45 @@
+.company {
+  display: flex;
+  align-items: center;
+}
+
+.company_info {
+  padding-left: 0.625rem;
+}
+
+.years {
+  display: inline-block;
+  margin-top: 0.3125rem;
+}
+
+.achievements {
+  padding: 0.3125rem;
+  padding-left: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height 0.5s ease-in-out;
+  width: 100%;
+}
+
+.open {
+  max-height: 100px;
+}
+
+.close {
+  max-height: 0;
+}
+
+.img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10%;
+}
+
+.readmore {
+  display: flex;
+  justify-content: center;
+}
+
+.readmore button {
+  margin-right: 0.3125rem;
+}
