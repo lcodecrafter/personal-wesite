@@ -1,7 +1,9 @@
+import st from './mainstatement.module.css';
+
 export default function MainStatement() {
   return (
-    <section>
-      <h1 className="f-big">Zen developer 🧘‍♂️</h1>
+    <section className={st.container}>
+      <h1 className="f-medium">Zen developer 🧘‍♂️</h1>
       <p>
         <strong>+7</strong> years of experience as a software developer.
         Experience developing solutions from scratch, adding new functionalities
