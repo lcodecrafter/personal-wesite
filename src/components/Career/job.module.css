@@ -13,33 +13,20 @@
 }
 
 .achievements {
-  padding: 0.3125rem;
-  padding-left: 0;
   max-height: 0;
   overflow-y: hidden;
-  transition: max-height 0.5s ease-in-out;
+  padding: 0.3125rem;
+  padding-left: 0;
+  transition: max-height 0.6s ease-in;
   width: 100%;
 }
 
 .open {
-  max-height: 100px;
-}
-
-.close {
-  max-height: 0;
+  max-height: 1000px;
 }
 
 .img {
-  width: 10rem;
-  height: 10rem;
   border-radius: 10%;
-}
-
-.readmore {
-  display: flex;
-  justify-content: center;
-}
-
-.readmore button {
-  margin-right: 0.3125rem;
+  height: 10rem;
+  width: 10rem;
 }

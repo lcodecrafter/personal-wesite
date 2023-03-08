@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import ArrowUp from '../UI/icons/ArrowUp';
-import ArrowDown from '../UI/icons/ArrowDown';
-import Button from '../UI/Button';
+import React, { useState, useRef } from 'react';
+import ReadMore from './ReadMore';
 import styles from './job.module.css';
-import { Console } from 'console';
 
 interface props {
   children: React.ReactNode;
@@ -14,20 +11,17 @@ interface props {
 
 export default function Job({ children, imageData, position, years }: props) {
   const [displayText, setDisplayText] = useState(false);
-  const toogleText = () => {
+  const handleClickToogle = () => {
     setDisplayText(prev => !prev);
   };
-  const arrow = displayText ? (
-    <ArrowUp heigth="16px" width="16px" />
-  ) : (
-    <ArrowDown heigth="16px" width="16px" />
-  );
+  const arrow = displayText ? 'up' : 'down';
 
   const achievementsClasses =
-    styles.achievements + ' ' + (displayText ? styles.open : styles.close);
+    styles.achievements + ' ' + (displayText ? styles.open : '');
 
-  console.log(achievementsClasses);
-  console.log(displayText);
+  const button = (
+    <ReadMore arrowType={arrow} clickHandler={handleClickToogle} />
+  );
 
   return (
     <div>
@@ -47,12 +41,10 @@ export default function Job({ children, imageData, position, years }: props) {
           </span>
         </div>
       </div>
-      <div className={achievementsClasses}>{children}</div>
-      <div className={styles.readmore}>
-        <Button className={styles.button} onClick={toogleText}>
-          <span className={`${styles.readmore} f-mall`}>Read more</span>
-          {arrow}
-        </Button>
+      {!displayText ? button : ''}
+      <div className={achievementsClasses}>
+        {children}
+        {button}
       </div>
     </div>
   );
