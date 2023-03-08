@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import ReadMore from './ReadMore';
-import styles from './job.module.css';
+import st from './job.module.css';
 
 interface props {
   children: React.ReactNode;
@@ -17,26 +17,22 @@ export default function Job({ children, imageData, position, years }: props) {
   const arrow = displayText ? 'up' : 'down';
 
   const achievementsClasses =
-    styles.achievements + ' ' + (displayText ? styles.open : '');
+    st.achievements + ' ' + (displayText ? st.open : '');
 
   const button = (
     <ReadMore arrowType={arrow} clickHandler={handleClickToogle} />
   );
 
   return (
-    <div>
-      <div className={styles.company}>
+    <div className={st.container}>
+      <div className={st.company}>
         <div>
-          <img
-            className={styles.img}
-            src={imageData.path}
-            alt={imageData.alt}
-          />
+          <img className={st.img} src={imageData.path} alt={imageData.alt} />
         </div>
-        <div className={styles.company_info}>
+        <div className={st.company_info}>
           <span className="f-big">{position}</span>
           <br />
-          <span className={styles.years}>
+          <span className={st.years}>
             From {years.from} to {years.to}
           </span>
         </div>
