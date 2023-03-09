@@ -11,9 +11,9 @@ interface props {
 export default function ReadMore({ clickHandler, arrowType }: props) {
   const arrow =
     arrowType === 'up' ? (
-      <ArrowUp heigth="16px" width="16px" />
+      <ArrowUp height="16px" width="16px" />
     ) : (
-      <ArrowDown heigth="16px" width="16px" />
+      <ArrowDown height="16px" width="16px" />
     );
 
   return (

@@ -1,7 +1,7 @@
-export default function ArrowDown({ width, heigth }: iconProps) {
+export default function ArrowDown({ width, height }: iconProps) {
   return (
     <svg
-      height={heigth}
+      height={height}
       width={width}
       viewBox="0 0 24 24"
       fill="none"
