@@ -30,7 +30,7 @@ export default function Job({ children, imageData, position, years }: props) {
           <img className={st.img} src={imageData.path} alt={imageData.alt} />
         </div>
         <div className={st.company_info}>
-          <span className="f-big">{position}</span>
+          <span className={`${st['job-position']} f-big`}>{position}</span>
           <br />
           <span className={st.years}>
             From {years.from} to {years.to}

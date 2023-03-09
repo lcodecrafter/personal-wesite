@@ -1,5 +1,8 @@
 .container {
+  border-radius: 1rem;
+  box-shadow: 0px 0px 5px 0px rgb(188 188 188);
   margin-bottom: 1.1rem;
+  padding: 0.8rem;
 }
 
 .company {
@@ -9,9 +12,19 @@
 
 .company_info {
   padding-left: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+}
+
+.job-position {
+  font-size: 1.5rem;
 }
 
 .years {
+  color: rgb(95, 95, 95);
   display: inline-block;
   margin-top: 0.3125rem;
 }
@@ -19,7 +32,6 @@
 .achievements {
   max-height: 0;
   overflow-y: hidden;
-  padding: 0.3125rem;
   padding-left: 0;
   transition: max-height 0.6s ease-in;
   width: 100%;

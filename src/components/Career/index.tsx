@@ -5,7 +5,7 @@ import appico from '@/assets/appico.jpeg';
 export default function Career() {
   return (
     <section className="">
-      <h2 className="f-medium">Career</h2>
+      <h2 className="f-regular titles-f-size">Career</h2>
       <Job
         imageData={{ path: ingram, alt: 'Ingram Micro' }}
         position="Full stack developer"
