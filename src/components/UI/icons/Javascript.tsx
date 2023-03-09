@@ -8,6 +8,7 @@ export default function Javascript({ height, width }: iconProps) {
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
     >
+      <title>Javascript</title>
       <g>
         <path d="M0,0 L256,0 L256,256 L0,256 L0,0 Z" fill="#F7DF1E"></path>
         <path

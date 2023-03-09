@@ -18,21 +18,33 @@ export default function Skills() {
       <h2 className="f-regular titles-f-size">Skills</h2>
       <p>
         These are some of the technologies and tools that I have mostly used in
-        my career. Featured with a ⭐️, are the ones I am more comfortable with
-        and I would like to continue using them.
+        my career. Featured with a ⭐️, the ones I enjoy with.
       </p>
       <div className={st['icons-container']}>
-        <Css />
-        <Git />
+        <div className={st.featured}>
+          <Javascript />
+        </div>
+        <div className={st.featured}>
+          <React />
+        </div>
+
         <Html />
-        <Javascript />
+        <Css />
+        <Sass />
+        <div className={st.featured}>
+          <Git />
+        </div>
+        <div className={st.featured}>
+          <Typescript />
+        </div>
+        <div className={st.featured}>
+          <Nodejs />
+        </div>
+
+        <Php />
+
         <Mongodb />
         <Mysql />
-        <Nodejs />
-        <Php />
-        <React />
-        <Sass />
-        <Typescript />
       </div>
     </div>
   );

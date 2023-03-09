@@ -15,7 +15,24 @@
 .icons-container svg {
   border-radius: 10%;
   box-shadow: 1px 1px 3px 0px rgb(213, 213, 213);
-  height: 3.75rem;
-  margin: 0.9375rem 0.625rem;
-  width: 3.75rem;
+  height: 5.4rem;
+  margin: 0.94rem 0.63rem;
+  position: relative;
+  width: 5.4rem;
+}
+
+.featured {
+  position: relative;
+}
+
+.featured::before {
+  content: '⭐️';
+  display: block;
+  font-size: 0.62rem;
+  height: 0.62rem;
+  right: 0;
+  position: absolute;
+  transform: translate(-0.43rem, 0.37rem);
+  width: 0.62rem;
+  z-index: 1;
 }

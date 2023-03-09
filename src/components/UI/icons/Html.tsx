@@ -8,6 +8,7 @@ export default function Html({ height, width }: iconProps) {
       role="img"
       viewBox="0 0 512 512"
     >
+      <title>Html</title>
       <path fill="#e34f26" d="M71 460L30 0h451l-41 460-185 52" />
       <path fill="#ef652a" d="M256 472l149-41 35-394H256" />
       <path
