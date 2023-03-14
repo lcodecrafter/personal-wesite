@@ -5,7 +5,7 @@ import styles from './personalInfo.module.css';
 
 export default function PersonalInfo() {
   return (
-    <div className={styles['personal-info']}>
+    <section className={styles['personal-info']}>
       <div className={styles['image-container']}>
         <img src={portraitImg} alt="leandro" />
       </div>
@@ -19,6 +19,6 @@ export default function PersonalInfo() {
         <span>Cantabria, Spain</span>
         <SocialLinks />
       </div>
-    </div>
+    </section>
   );
 }

@@ -75,7 +75,7 @@ a {
 }
 
 section {
-  padding-top: 0.7rem;
+  padding: 0.7rem 1.5rem;
 }
 
 /*@media (prefers-color-scheme: light) {

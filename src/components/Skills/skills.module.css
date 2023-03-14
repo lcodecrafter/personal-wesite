@@ -1,10 +1,7 @@
 .container {
   background-color: #ecececa6;
   padding: 2rem;
-  position: absolute;
-  left: 0;
   margin-top: 1rem;
-  right: 0;
 }
 
 .icons-container {
