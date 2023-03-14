@@ -14,6 +14,7 @@ export default function MainStatement() {
         different teams and solutions. I like feeling ownership of the projects
         I work on.
       </p>
+      <a href="#aboutme">More about me 🤌</a>
     </section>
   );
 }

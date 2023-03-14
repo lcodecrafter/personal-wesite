@@ -14,7 +14,7 @@ import st from './skills.module.css';
 
 export default function Skills() {
   return (
-    <div className={st.container}>
+    <section className={st.container}>
       <h2 className="f-regular titles-f-size">Skills</h2>
       <p>
         These are some of the technologies and tools that I have mostly used in
@@ -46,6 +46,6 @@ export default function Skills() {
         <Mongodb />
         <Mysql />
       </div>
-    </div>
+    </section>
   );
 }
