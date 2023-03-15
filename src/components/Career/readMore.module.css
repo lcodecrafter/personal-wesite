@@ -2,7 +2,6 @@
   display: flex;
   font-size: 0.8rem;
   justify-content: center;
-  margin-top: 0.5rem;
 }
 
 @media (min-width: 820px) {
