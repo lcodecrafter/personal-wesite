@@ -2,9 +2,10 @@ import Button from '../UI/Button';
 import ArrowUp from '../UI/icons/ArrowUp';
 import ArrowDown from '../UI/icons/ArrowDown';
 import st from './readMore.module.css';
+import React from 'react';
 
 interface props {
-  clickHandler: () => void;
+  clickHandler: (e: React.MouseEvent) => void;
   arrowType: 'up' | 'down';
 }
 

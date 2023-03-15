@@ -29,11 +29,15 @@
   margin-top: 0.3125rem;
 }
 
+.button-container {
+  min-height: 2rem;
+}
+
 .achievements {
   max-height: 0;
   overflow-y: hidden;
   padding-left: 0;
-  transition: max-height 0.6s ease-in;
+  transition: max-height 0.6s ease;
   width: 100%;
 }
 

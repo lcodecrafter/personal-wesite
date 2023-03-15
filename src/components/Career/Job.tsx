@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import ReadMore from './ReadMore';
 import st from './job.module.css';
 
@@ -11,16 +11,32 @@ interface props {
 
 export default function Job({ children, imageData, position, years }: props) {
   const [displayText, setDisplayText] = useState(false);
-  const handleClickToogle = () => {
-    setDisplayText(prev => !prev);
-  };
-  const arrow = displayText ? 'up' : 'down';
+  const [displayMainButton, setDisplayMainButton] = useState(true);
 
+  const arrow = displayText ? 'up' : 'down';
   const achievementsClasses =
     st.achievements + ' ' + (displayText ? st.open : '');
 
-  const button = (
-    <ReadMore arrowType={arrow} clickHandler={handleClickToogle} />
+  const handleClickToggle = (e: React.MouseEvent, showMainButton = false) => {
+    setDisplayText(prev => !prev);
+    if (showMainButton) {
+      setTimeout(() => setDisplayMainButton(showMainButton), 550);
+    } else {
+      setDisplayMainButton(showMainButton);
+    }
+  };
+
+  const mainButton = displayMainButton ? (
+    <ReadMore arrowType={arrow} clickHandler={handleClickToggle} />
+  ) : (
+    ''
+  );
+
+  const secondaryButton = (
+    <ReadMore
+      arrowType={arrow}
+      clickHandler={(e: React.MouseEvent) => handleClickToggle(e, true)}
+    />
   );
 
   return (
@@ -31,16 +47,16 @@ export default function Job({ children, imageData, position, years }: props) {
         </div>
         <div className={st.company_info}>
           <span className={`${st['job-position']} f-big`}>{position}</span>
-          <br />
+
           <span className={st.years}>
             From {years.from} to {years.to}
           </span>
+          <div className={st['button-container']}>{mainButton}</div>
         </div>
       </div>
-      {!displayText ? button : ''}
       <div className={achievementsClasses}>
         {children}
-        {button}
+        {secondaryButton}
       </div>
     </div>
   );
