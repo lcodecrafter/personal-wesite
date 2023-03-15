@@ -13,6 +13,7 @@ export default function AboutMe() {
         <a
           title="Ghost of Tsushima"
           href="https://www.playstation.com/en-us/games/ghost-of-tsushima/"
+          target="_blank"
         >
           Ghost of Tsushima
         </a>
@@ -24,11 +25,11 @@ export default function AboutMe() {
       </p>
       <p>
         In the short term I would like to create a project with{' '}
-        <a title="Deno" href="https://deno.land/">
+        <a title="Deno" href="https://deno.land/" target="_blank">
           Deno
         </a>{' '}
         and{' '}
-        <a title="Fresh" href="https://fresh.deno.dev/">
+        <a title="Fresh" href="https://fresh.deno.dev/" target="_blank">
           Fresh
         </a>
         . I think they are two projects with a lot of potential and also have
