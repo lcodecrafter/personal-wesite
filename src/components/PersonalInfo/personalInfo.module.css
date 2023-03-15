@@ -1,16 +1,25 @@
 .personal-info {
-  display: flex;
   align-items: center;
-  height: 9.5rem;
+  display: flex;
+}
+
+.image-container {
+  max-height: 9.5rem;
+  max-width: 9.5rem;
 }
 
 .image-container img {
   border: 1.5px solid var(--secundary-color);
   border-radius: 100%;
   height: auto;
-  width: 9rem;
+  width: 100%;
 }
 
 .info-container {
   padding: 0 5px 0 10px;
+}
+
+.info-container span {
+  display: inline-block;
+  margin: 0.13rem 0;
 }
