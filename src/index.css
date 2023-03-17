@@ -8,6 +8,7 @@
 
 html,
 body,
+button,
 form,
 fieldset,
 table,
@@ -24,15 +25,11 @@ select,
 textarea,
 optgroup,
 option {
+  border: 0;
   font-family: inherit;
   font-size: inherit;
   font-style: inherit;
   font-weight: inherit;
-}
-
-a {
-  color: var(--secundary-color);
-  text-decoration: inherit;
 }
 
 :root {
@@ -42,9 +39,9 @@ a {
   font-weight: 300;
   line-height: 24px;
 
-  _color-scheme: dark light;
-  --dark-color: rgba(15, 15, 15, 0.87);
-  --white-color: #ffffff;
+  color-scheme: dark light;
+  --text-color: rgba(15, 15, 15, 0.87);
+  --bkc-color: #ffffff;
   --secundary-color: #3bb6d4;
 
   font-synthesis: none;
@@ -54,9 +51,36 @@ a {
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  background-color: var(--bkc-color);
+  color: var(--text-color);
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 #root {
   display: flex;
   justify-content: center;
+}
+
+a {
+  color: var(--secundary-color);
+  text-decoration: inherit;
+}
+
+body.dark {
+  --bck-color: rgba(15, 23, 42);
+  --text-color: rgba(228, 228, 231);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bkc-color: rgba(15, 23, 42);
+    --text-color: rgba(228, 228, 231);
+  }
 }
 
 .f-regular {
@@ -77,16 +101,3 @@ a {
 section {
   padding: 0.7rem 1.5rem;
 }
-
-/*@media (prefers-color-scheme: light) {
-  :root {
-    color: #363d43;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}*/
