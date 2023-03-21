@@ -1,16 +1,12 @@
-interface props {
-  className: string;
-}
-
-export default function Light({ className }: props) {
+export default function Light({ width, height, className }: iconProps) {
   return (
     <svg
+      height={height}
+      width={width}
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       role="img"
-      className={className}
-      width="1em"
-      height="1em"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 24 24"
     >
