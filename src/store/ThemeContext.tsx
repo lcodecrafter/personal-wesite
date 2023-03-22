@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { useEffect, ReactNode } from 'react';
 import useLocalStorage from '@/hooks/useLocalStorage';
 
 type theme = 'dark' | 'light';
@@ -27,6 +27,10 @@ export function ThemeProvider({ children }: providerProps) {
   const themeHandler = (theme: theme) => {
     setTheme(theme);
   };
+
+  useEffect(() => {
+    document.querySelector('body')!.className = theme;
+  });
 
   return (
     <themeCtx.Provider value={{ theme, themeHandler }}>
