@@ -40,7 +40,7 @@ option {
   line-height: 24px;
 
   color-scheme: dark light;
-  --text-color: rgba(15, 15, 15, 0.87);
+  --text-color: #0f0f0fde;
   --bkc-color: #ffffff;
   --secundary-color: #3bb6d4;
 
@@ -72,15 +72,8 @@ a {
 }
 
 body.dark {
-  --bck-color: rgba(15, 23, 42);
-  --text-color: rgba(228, 228, 231);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bkc-color: rgba(15, 23, 42);
-    --text-color: rgba(228, 228, 231);
-  }
+  --bkc-color: #0f172a;
+  --text-color: #e4e4e7;
 }
 
 .f-regular {

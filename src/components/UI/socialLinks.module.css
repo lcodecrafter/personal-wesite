@@ -19,3 +19,7 @@
 .codewars {
   margin-left: 1rem;
 }
+
+:global(.dark) .github {
+  background-color: #ffffff;
+}

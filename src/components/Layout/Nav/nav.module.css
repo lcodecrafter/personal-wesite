@@ -1,5 +1,5 @@
 .nav {
-  background-color: #ffffffb4;
+  backdrop-filter: blur(12px);
   display: flex;
   height: 3rem;
   justify-content: end;
@@ -10,8 +10,38 @@
   width: 100%;
 }
 
-.ligh,
-.dark {
+.btn-circle {
+  background-color: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  --btn-bkc-hover: rgba(51, 65, 85, 0.8);
+}
+
+.btn-circle,
+.btn-circle svg {
+  border-radius: 100%;
+}
+
+.btn-circle:hover {
+  background-color: var(--btn-bkc-hover);
+}
+
+.btn-circle svg {
   color: var(--secundary-color);
   font-size: 2rem;
+}
+
+/*TODO: Meter el light y ponerlo como defecto en la variable*/
+
+.dark .btn-circle:hover {
+  --btn-bkc-hover: rgba(51, 65, 85, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn-circle:hover {
+    --btn-bkc-hover: rgba(51, 65, 85, 0.8);
+  }
 }

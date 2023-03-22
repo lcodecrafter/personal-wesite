@@ -9,3 +9,7 @@
   outline: none;
   padding: 0.3125rem;
 }
+
+:global(.dark) .button {
+  background: var(--text-color);
+}
