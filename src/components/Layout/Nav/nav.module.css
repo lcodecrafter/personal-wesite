@@ -17,7 +17,7 @@
   justify-content: center;
   height: 2rem;
   width: 2rem;
-  --btn-bkc-hover: rgba(51, 65, 85, 0.8);
+  --btn-bkc-hover: rgba(226, 231, 238, 0.8);
 }
 
 .btn-circle,
@@ -34,14 +34,6 @@
   font-size: 2rem;
 }
 
-/*TODO: Meter el light y ponerlo como defecto en la variable*/
-
-.dark .btn-circle:hover {
+:global(.dark) .btn-circle:hover {
   --btn-bkc-hover: rgba(51, 65, 85, 0.8);
-}
-
-@media (prefers-color-scheme: dark) {
-  .btn-circle:hover {
-    --btn-bkc-hover: rgba(51, 65, 85, 0.8);
-  }
 }

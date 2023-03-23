@@ -29,6 +29,10 @@
   margin-top: 0.3125rem;
 }
 
+:global(.dark) .years {
+  color: rgb(157, 160, 169);
+}
+
 .button-container {
   margin-top: 0.5rem;
   min-height: 2rem;
