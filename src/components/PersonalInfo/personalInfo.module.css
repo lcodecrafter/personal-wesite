@@ -4,8 +4,8 @@
 }
 
 .image-container {
-  max-height: 9.5rem;
-  max-width: 9.5rem;
+  height: 10rem;
+  width: 75%;
 }
 
 .image-container img {
@@ -26,8 +26,8 @@
 
 @media (min-width: 820px) {
   .image-container {
-    max-height: 11.5rem;
-    max-width: 11.5rem;
+    height: 11.5rem;
+    width: 11.5rem;
   }
 
   .info-container {

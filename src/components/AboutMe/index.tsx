@@ -5,7 +5,7 @@ export default function AboutMe() {
         About me
       </h2>
       <p>
-        Hello! you can call me leo, I am a technology and nature enthusiast from
+        Hello! you can call me Leo, I am a technology and nature enthusiast from
         a small town in Cantabria, Spain.
       </p>
       <p>
