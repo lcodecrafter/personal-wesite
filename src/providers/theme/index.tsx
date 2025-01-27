@@ -1,17 +1,10 @@
 import { ReactNode } from 'react';
-
 import { useThemeProvider } from './useThemeProvider';
-import { ThemeContext } from './types';
-import React from 'react';
+import { themeCtx } from './context';
 
 interface providerProps {
   children: ReactNode;
 }
-
-export const themeCtx = React.createContext<ThemeContext>({
-  theme: 'light',
-  setTheme: () => {},
-});
 
 export function ThemeProvider({ children }: providerProps) {
   const { theme, setTheme } = useThemeProvider();

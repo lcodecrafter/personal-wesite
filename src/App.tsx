@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { themeCtx } from './providers/theme';
+import { themeCtx } from './providers/theme/context';
 import Home from './pages/Home';
 import styles from './App.module.css';
 

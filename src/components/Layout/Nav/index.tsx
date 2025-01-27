@@ -3,7 +3,7 @@ import Dark from '@/components/UI/icons/Dark';
 
 import styles from './nav.module.css';
 import { useContext } from 'react';
-import { themeCtx } from '@/providers/theme';
+import { themeCtx } from '@/providers/theme/context';
 
 export default function Nav() {
   const ctx = useContext(themeCtx);
