@@ -3,7 +3,7 @@ import Dark from '@/components/UI/icons/Dark';
 
 import styles from './nav.module.css';
 import { useContext } from 'react';
-import { themeCtx } from '@/store/ThemeContext';
+import { themeCtx } from '@/providers/theme';
 
 export default function Nav() {
   const ctx = useContext(themeCtx);
@@ -16,7 +16,7 @@ export default function Nav() {
     );
 
   const onButtonClick = () => {
-    ctx.themeHandler(ctx.theme === 'dark' ? 'light' : 'dark');
+    ctx.setTheme(ctx.theme === 'dark' ? 'light' : 'dark');
   };
 
   return (

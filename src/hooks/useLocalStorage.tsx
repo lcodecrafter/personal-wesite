@@ -1,29 +1,29 @@
 import { useState } from 'react';
 
-export default function useLocalStorage<T>(
-  key: string,
-  initialValue: T,
-): [T, (arg: T) => void] {
-  const readValue = (): T => {
-    try {
-      const item = window.localStorage.getItem(key);
-
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      console.log(error);
+export function useLocalStorage<T = string>(key: string, initialValue?: T) {
+  const [storedValue, setStoredValue] = useState<T>(() => {
+    const item = localStorage.getItem(key);
+    if (item !== null) {
+      try {
+        return JSON.parse(item) as T;
+      } catch {
+        console.warn(`Error parsing JSON from localStorage key "${key}".`);
+      }
+    }
+    if (initialValue !== undefined) {
+      localStorage.setItem(key, JSON.stringify(initialValue));
       return initialValue;
     }
+
+    throw new Error(
+      `No initial value provided for key "${key}" and no value in localStorage.`,
+    );
+  });
+
+  const setValue = (value: T) => {
+    localStorage.setItem(key, JSON.stringify(value));
+    setStoredValue(value);
   };
 
-  const [storedValue, setStoredValue] = useState<T>(readValue);
-
-  const setValue = (value: T): void => {
-    try {
-      window.localStorage.setItem(key, JSON.stringify(value));
-      setStoredValue(value);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  return [storedValue, setValue];
+  return [storedValue, setValue] as const;
 }

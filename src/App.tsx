@@ -1,12 +1,12 @@
 import { useContext } from 'react';
-import { themeCtx } from './store/ThemeContext';
+import { themeCtx } from './providers/theme';
 import Home from './pages/Home';
 import styles from './App.module.css';
 
 function App() {
-  const ctx = useContext(themeCtx);
+  const { theme } = useContext(themeCtx);
   return (
-    <div className={`${styles.app} ${ctx.theme}`}>
+    <div className={`${styles.app} ${theme}`}>
       <Home />
     </div>
   );
