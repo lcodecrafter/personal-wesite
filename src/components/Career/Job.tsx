@@ -17,7 +17,8 @@ export default function Job({ children, imageData, position, years }: props) {
   const achievementsClasses =
     st.achievements + ' ' + (displayText ? st.open : '');
 
-  const handleClickToggle = (e: React.MouseEvent, showMainButton = false) => {
+  //TODO: Refactor this function
+  const handleClickToggle = (_: React.MouseEvent, showMainButton = false) => {
     setDisplayText(prev => !prev);
     if (showMainButton) {
       setTimeout(() => setDisplayMainButton(showMainButton), 550);
